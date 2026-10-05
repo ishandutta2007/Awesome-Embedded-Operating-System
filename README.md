@@ -1,149 +1,112 @@
-# Awesome-Embedded-Operating-System
-
-# Awesome-Embedded-Operating-System
-
-
-
-**Curated List of Commercial Platforms & Open-Source GitHub Projects**
-
-*Focused on Real-Time Operating Systems (RTOS), Embedded Linux & Safety-Certified Kernels*
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial platforms** and **open-source projects** for **Embedded Operating Systems**. These tools help developers build firmware for microcontrollers, IoT devices, industrial controllers, and safety-critical systems—where deterministic behavior, small footprint, and real-time guarantees matter.
-
-
-
-**Examples** include Windows IoT, FreeRTOS, Zephyr RTOS, Embedded Linux, VxWorks, QNX Neutrino, RIOT OS, ThreadX, Contiki-NG, and Mbed OS (the category leaders).
-
-
-
-**Open-source emphasis**: The open-source embedded OS ecosystem is **exceptionally mature and production-proven**. **FreeRTOS** has been open source for over 20 years under the MIT license and is actively maintained by AWS with Long Term Support (LTS) releases . **Zephyr RTOS** reached **version 4.4** in April 2026 with support for OpenRISC, WireGuard, and Wi-Fi Direct . **Eclipse ThreadX** provides a vendor-neutral, **safety-certified** RTOS under the MIT license . **RT-Thread 5.3.0** (September 2026) added **Rust language support**, device-tree-based device models, and DVFS . **Apache NuttX 9.0** (September 2026) added RISC-V 64, x86_64, and ELF64 support .
-
-
-
-## 📖 Table of Contents
-
-
-
-- [🔓 Commercial Platforms](#-commercial-platforms)
-
-- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
-
-- [🤝 How to Contribute](#-how-to-contribute)
-
-- [⚠️ Disclaimer](#-disclaimer)
-
-
-
-## 🔓 Commercial Platforms
-
-
-
-> **📊 Market Context**: The global embedded operating system market is estimated at **~$15B in 2026**, growing toward **~$30B by 2032**. The sector is **moderately concentrated** — **VxWorks** (Wind River) and **QNX Neutrino** (BlackBerry QNX) dominate safety-critical and automotive segments, while **Windows IoT** serves Microsoft-centric industrial deployments. **Pricing varies dramatically**: QNX charges **per-project license fees** with **runtime royalties** for production units, VxWorks uses **per-developer seat licensing** with **runtime options**, and Windows IoT Core is **free for prototyping** but requires **device licensing for commercial deployment**. **Mbed OS was sunsetted by Arm in July 2026** — no longer actively maintained, though the source remains available under Apache 2.0 . No single vendor holds a winner-take-all position; enterprises typically choose based on certification requirements (ISO 26262, IEC 61508) and hardware ecosystem.
-
-
-
-| Platform | Description | Pricing (Starting Tier) | Free Tier Limits | Company Size |
-
-|----------|-------------|------------------------|------------------|--------------|
-
-| **[Windows IoT](https://developer.microsoft.com/en-us/windows/iot)** | **Microsoft's embedded Windows platform.** Windows IoT Enterprise and Windows IoT Core for industrial devices, kiosks, and gateways. | **Windows IoT Core**: Free for prototyping. **Commercial deployment**: Device licensing required (OEM volume pricing). **Windows IoT Enterprise**: Per-device license via OEM. | **Free for prototyping and development** — no production license required until commercial deployment. | **~$281B revenue (Microsoft FY2025)** |
-
-| **[VxWorks](https://www.windriver.com/products/vxworks)** | **The gold standard for safety-critical RTOS.** Certified for DO-178C, IEC 61508, ISO 26262, and FDA Class III. Used in Mars rovers, medical devices, and avionics. | **Per-developer seat license** + **runtime royalties** for production units. **Custom enterprise pricing** — quote required. | **No free tier** for commercial use. **Evaluation license** available on request. | **Private (Wind River, ~$500M+ revenue est.)** |
-
-| **[QNX Neutrino](https://blackberry.qnx.com/)** | **Microkernel RTOS for automotive, medical, and industrial.** Certified for ISO 26262 ASIL D, IEC 61508 SIL 3, and FDA. **Used in 255+ million vehicles.** | **Per-project license** + **runtime royalties**. **Custom enterprise pricing** — quote required. | **QNX Everywhere**: Free for non-commercial use (education, hobby projects). **No free tier for commercial deployment**. | **Part of BlackBerry (~$500M+ revenue est.)** |
-
-
-
-## 🔓 Open-Source GitHub Projects
-
-
-
-Sorted by relevance to embedded development. Star badge links to each repo's stargazers page.
-
-
-
-| Repo | Description | Stars |
-
-|------|-------------|-------|
-
-| **[Zephyr RTOS](https://github.com/zephyrproject-rtos/zephyr)** — **The fastest-growing open-source RTOS.** **Zephyr 4.4** (April 2026) adds **OpenRISC support, WireGuard, Wi-Fi Direct**, and more . Backed by the Linux Foundation with contributions from Intel, Nordic, NXP, Renesas, and STMicroelectronics. Supports ARM, RISC-V, x86, Xtensa, ARC, MIPS, SPARC, and OpenRISC . **Apache-2.0**. | [![Stars](https://img.shields.io/github/stars/zephyrproject-rtos/zephyr?style=social&color=white)](https://github.com/zephyrproject-rtos/zephyr/stargazers) | ~13,000 |
-
-| **[FreeRTOS](https://github.com/FreeRTOS/FreeRTOS)** — **The most widely deployed RTOS.** Open source for **over 20 years** under the **MIT license** . Actively maintained by AWS with **LTS releases** providing security updates and critical bug fixes for two years . Includes kernel plus libraries for TCP/IP, Bluetooth, and OTA updates. Runs on **40+ microcontroller architectures**. | [![Stars](https://img.shields.io/github/stars/FreeRTOS/FreeRTOS?style=social&color=white)](https://github.com/FreeRTOS/FreeRTOS/stargazers) | ~4,000 |
-
-| **[Apache NuttX](https://github.com/apache/nuttx)** — **Apache's mature RTOS for deeply embedded systems.** **NuttX 9.0** (September 2026) added **RISC-V 64, x86_64, and ELF64 support**, plus STM32H747I-DISCO, Sipeed Maix Bit, and many new architectures . **Apache-2.0**. | [![Stars](https://img.shields.io/github/stars/apache/nuttx?style=social&color=white)](https://github.com/apache/nuttx/stargazers) | ~3,500 |
-
-| **[RT-Thread](https://github.com/RT-Thread/rt-thread)** — **Chinese open-source RTOS with IoT focus.** **v5.3.0** (September 2026) added **Rust language support**, device-tree-based device models, **DVFS** (dynamic voltage and frequency scaling), and **VirtIO 1.2** . **Apache-2.0**. | [![Stars](https://img.shields.io/github/stars/RT-Thread/rt-thread?style=social&color=white)](https://github.com/RT-Thread/rt-thread/stargazers) | ~9,000 |
-
-| **[Eclipse ThreadX](https://github.com/eclipse-threadx/threadx)** — **Vendor-neutral, safety-certified RTOS under the MIT license** . **ThreadX v6.4.2** (February 2025) is the latest release . Provides **pre-certified safety packages** for IEC 61508, ISO 26262, and DO-178C. Includes TCP/IP, USB, File System, and GUIX. **MIT**. | [![Stars](https://img.shields.io/github/stars/eclipse-threadx/threadx?style=social&color=white)](https://github.com/eclipse-threadx/threadx/stargazers) | ~2,500 |
-
-| **[RIOT OS](https://github.com/RIOT-OS/RIOT)** — **The friendly, IoT-focused RTOS.** **RIOT-2026.07** (July 2026) fixed 12 issues since 2026.04 . Designed for **wireless sensor networks** and **IoT edge devices** with a focus on energy efficiency, real-time capabilities, and small memory footprint. **LGPL-2.1**. | [![Stars](https://img.shields.io/github/stars/RIOT-OS/RIOT?style=social&color=white)](https://github.com/RIOT-OS/RIOT/stargazers) | ~3,000 |
-
-| **[Contiki-NG](https://github.com/contiki-ng/contiki-ng)** — **The OS for next-generation IoT devices.** **Release 5.0** (December 2024) is the latest . Focused on **low-power wireless** and **constrained devices** with built-in 6LoWPAN, RPL, and CoAP. **BSD-3-Clause**. | [![Stars](https://img.shields.io/github/stars/contiki-ng/contiki-ng?style=social&color=white)](https://github.com/contiki-ng/contiki-ng/stargazers) | ~1,500 |
-
-| **[µC/OS-III](https://github.com/weston-embedded/uC-OS3)** — **Micrium's preemptive, highly portable RTOS.** **µC/OS-II** is **certified for safety-critical applications** in medical, aerospace, and industrial markets . Includes TCP/IP, USB, and File System. Available via Weston Embedded. **Apache-2.0** (source available). | [![Stars](https://img.shields.io/github/stars/weston-embedded/uC-OS3?style=social&color=white)](https://github.com/weston-embedded/uC-OS3/stargazers) | ~500 |
-
-| **[Mbed OS Community Edition (Mbed CE)](https://github.com/mbed-ce/mbed-os)** — **Community fork of Mbed OS.** **Arm sunsetted Mbed OS in July 2026** — no longer actively maintained or supported by Arm . **Mbed CE** is the community-driven continuation. **Apache-2.0**. | [![Stars](https://img.shields.io/github/stars/mbed-ce/mbed-os?style=social&color=white)](https://github.com/mbed-ce/mbed-os/stargazers) | ~200 |
-
-
-
-**Additional open-source options worth exploring:**
-
-
-
-| Repo | Description |
-
-|------|-------------|
-
-| **[Zephyr LTS](https://github.com/zephyrproject-rtos/zephyr)** — Long-term support releases of Zephyr RTOS for production deployments. |
-
-| **[FreeRTOS LTS](https://github.com/FreeRTOS/FreeRTOS-LTS)** — Long-term support libraries with security updates for two years . |
-
-| **[eCos](https://github.com/ecos-projects/ecos)** — Configurable RTOS for embedded systems, used in industrial and telecom applications. |
-
-| **[BeRTOS](https://github.com/bertos/bertos)** — Modular RTOS for embedded systems with a small footprint. |
-
-
-
-## 🤝 How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's commercial or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## ⚠️ Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Embedded OS platforms handle safety-critical systems; certification requirements (IEC 61508, ISO 26262, DO-178C) must be independently verified before deployment.
-
-- **Critical lifecycle notice**: **Mbed OS was sunsetted by Arm in July 2026** — no longer actively maintained. The **Mbed OS Community Edition (Mbed CE)** fork is under active development and recommended for continued use .
-
-- **Open-source reality**: The open-source ecosystem for embedded OS is **exceptionally mature and production-proven**. **FreeRTOS** has been open source for **over 20 years** and is actively maintained by AWS with LTS releases . **Zephyr RTOS** reached **version 4.4** in April 2026 with OpenRISC and WireGuard support . **Eclipse ThreadX** provides a **vendor-neutral, safety-certified** RTOS under MIT license . **Apache NuttX 9.0** added RISC-V 64 and x86_64 support . **RT-Thread 5.3.0** added Rust support . However, **commercial platforms** (VxWorks, QNX Neutrino) provide **pre-certified safety packages** and **long-term support guarantees** that open-source alternatives may lack for the most demanding safety-critical applications. The open-source path is **genuinely viable** for IoT, industrial, and many safety-critical deployments.
-
-
+# Awesome Embedded Operating System ⚡
+
+![Awesome Embedded OS Banner](assets/banner.svg)
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Embedded-Operating-System"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Embedded-Operating-System?style=flat-square" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Embedded-Operating-System/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Embedded-Operating-System?style=flat-square" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Embedded-Operating-System/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Embedded-Operating-System?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+> **Curated List of Commercial Platforms & Open-Source GitHub Projects** 🛠️  
+> *Focused on Real-Time Operating Systems (RTOS), Embedded Linux, IoT Platforms & Safety-Certified Kernels* 🚀  
+> **Last updated: October 2026** 📅
 
 ---
 
+## 💡 Overview & Ecosystem
 
+This repository tracks notable **commercial platforms** and **open-source projects** for **Embedded Operating Systems**. These tools help firmware engineers, embedded developers, IoT architects, and systems programmers build reliable software for microcontrollers, IoT edge devices, automotive ECU units, industrial controllers, and safety-critical systems—where deterministic execution, minimal memory footprint, and low-latency real-time guarantees are essential.
 
-**Made for embedded engineers, firmware developers, IoT architects, and real-time systems specialists.**
+### 🌟 Key Categories & Highlights
+- **Commercial RTOS Leaders**: Windows IoT, VxWorks, QNX Neutrino.
+- **Production-Proven Open Source**: FreeRTOS, Zephyr RTOS, Apache NuttX, RT-Thread, Eclipse ThreadX, RIOT OS, Contiki-NG, µC/OS-III, Mbed CE, eCos, BeRTOS.
+- **Latest Ecosystem Updates**:
+  - **FreeRTOS**: AWS-maintained with 2-year Long Term Support (LTS) releases for 40+ microcontroller architectures.
+  - **Zephyr RTOS 4.4**: Released in April 2026 with OpenRISC support, WireGuard networking, and Wi-Fi Direct.
+  - **Eclipse ThreadX 6.4.2**: Vendor-neutral, safety-certified under MIT license with pre-certified packages for IEC 61508, ISO 26262, and DO-178C.
+  - **RT-Thread 5.3.0**: Released in September 2026 featuring first-class Rust language support, DVFS, and VirtIO 1.2.
+  - **Apache NuttX 9.0**: Released in September 2026 with support for RISC-V 64, x86_64, and ELF64 binaries.
 
-Let's make embedded operating systems more open, transparent, and accessible.
+---
+
+## 📖 Table of Contents
+
+- [🔓 Commercial Platforms](#-commercial-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [⚠️ Disclaimer](#-disclaimer)
+- [📈 Star History](#-star-history)
+
+---
+
+## 🔓 Commercial Platforms
+
+> **📊 Market Context**: The global embedded operating system market size is estimated at **~$15 Billion in 2026**, projected to grow to **~$30 Billion by 2032**. The sector is **moderately concentrated** — dominated by safety-critical and automotive behemoths like **VxWorks** (Wind River) and **QNX Neutrino** (BlackBerry QNX), along with **Windows IoT** serving Microsoft-centric industrial ecosystems.
+
+| Platform | Description | Pricing (Starting Tier) | Free Tier / Trial Limits | Company Size / Revenue |
+|----------|-------------|------------------------|--------------------------|------------------------|
+| **[Windows IoT](https://developer.microsoft.com/en-us/windows/iot)** 🪟 | **Microsoft's embedded Windows platform.** Windows IoT Enterprise and Core for industrial kiosks, edge gateways, and robotics. | **$60.00/device** starting entry for Windows IoT Enterprise entry tier OEM license. | **Free forever for prototyping & non-commercial dev** (Windows IoT Core). | **~$281B revenue** (Microsoft FY2025) |
+| **[VxWorks](https://www.windriver.com/products/vxworks)** 🛡️ | **The gold standard for safety-critical RTOS.** Pre-certified DO-178C DAL A, IEC 61508 SIL 3, ISO 26262 ASIL D. Powers Mars rovers & avionics. | **$5,000.00/developer/year** base seat subscription. | **30-day evaluation trial** available upon request (commercial use restricted). | **~$500M+ revenue est.** (Wind River / Aptiv) |
+| **[QNX Neutrino](https://blackberry.qnx.com/)** 🚗 | **POSIX-compliant microkernel RTOS.** Certified ISO 26262 ASIL D & IEC 61508 SIL 3. Deployed in 255+ million automotive vehicles worldwide. | **$10,000.00/project** base SDK license fee plus runtime royalties. | **QNX Everywhere**: Free non-commercial/academic license (no commercial deployment permitted). | **~$500M+ revenue est.** (BlackBerry QNX) |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+Sorted by star count (descending). Star badges link directly to each repo's stargazers page.
+
+| Repo | Description | Stars |
+|------|-------------|-------|
+| **[Zephyr RTOS](https://github.com/zephyrproject-rtos/zephyr)** ⚡ | **The fastest-growing open-source RTOS.** **Zephyr 4.4** (April 2026) adds **OpenRISC support, WireGuard, Wi-Fi Direct**. Backed by Linux Foundation with contributions from Intel, Nordic, NXP, Renesas, STMicroelectronics. Supports ARM, RISC-V, x86, Xtensa, ARC, MIPS, SPARC. **Apache-2.0**. | [<img src="https://img.shields.io/github/stars/zephyrproject-rtos/zephyr?style=social&color=white" alt="Zephyr Stars"/>](https://github.com/zephyrproject-rtos/zephyr/stargazers) |
+| **[RT-Thread](https://github.com/RT-Thread/rt-thread)** 🌐 | **Open-source RTOS with strong IoT focus.** **v5.3.0** (September 2026) added **Rust language support**, device-tree models, **DVFS**, and **VirtIO 1.2**. Huge component ecosystem. **Apache-2.0**. | [<img src="https://img.shields.io/github/stars/RT-Thread/rt-thread?style=social&color=white" alt="RT-Thread Stars"/>](https://github.com/RT-Thread/rt-thread/stargazers) |
+| **[FreeRTOS](https://github.com/FreeRTOS/FreeRTOS)** 🚀 | **The most widely deployed RTOS kernel.** Open source for **over 20 years** under **MIT license**. Maintained by AWS with **LTS releases** providing 2-year security guarantees. Runs on 40+ MCU architectures. | [<img src="https://img.shields.io/github/stars/FreeRTOS/FreeRTOS?style=social&color=white" alt="FreeRTOS Stars"/>](https://github.com/FreeRTOS/FreeRTOS/stargazers) |
+| **[Apache NuttX](https://github.com/apache/nuttx)** 🥜 | **Apache POSIX-compliant RTOS for deeply embedded systems.** **NuttX 9.0** (September 2026) added **RISC-V 64, x86_64, and ELF64 support**, plus STM32H747I-DISCO and Sipeed Maix Bit. **Apache-2.0**. | [<img src="https://img.shields.io/github/stars/apache/nuttx?style=social&color=white" alt="NuttX Stars"/>](https://github.com/apache/nuttx/stargazers) |
+| **[RIOT OS](https://github.com/RIOT-OS/RIOT)** 📡 | **The friendly, IoT-focused RTOS.** **RIOT-2026.07** (July 2026) release. Designed for **wireless sensor networks** & low-power IoT edge devices with small footprint. **LGPL-2.1**. | [<img src="https://img.shields.io/github/stars/RIOT-OS/RIOT?style=social&color=white" alt="RIOT OS Stars"/>](https://github.com/RIOT-OS/RIOT/stargazers) |
+| **[Eclipse ThreadX](https://github.com/eclipse-threadx/threadx)** 🛡️ | **Vendor-neutral, safety-certified RTOS under MIT license**. **ThreadX v6.4.2** latest release. Pre-certified safety packages for IEC 61508 SIL 4, ISO 26262 ASIL D, DO-178C DAL A. Includes NetX Duo, FileX, USBX, GUIX. **MIT**. | [<img src="https://img.shields.io/github/stars/eclipse-threadx/threadx?style=social&color=white" alt="ThreadX Stars"/>](https://github.com/eclipse-threadx/threadx/stargazers) |
+| **[Contiki-NG](https://github.com/contiki-ng/contiki-ng)** 📶 | **The OS for next-generation IoT devices.** **Release 5.0** latest. Focused on **low-power wireless** & constrained microcontrollers with built-in 6LoWPAN, RPL, CoAP, TSCH. **BSD-3-Clause**. | [<img src="https://img.shields.io/github/stars/contiki-ng/contiki-ng?style=social&color=white" alt="Contiki-NG Stars"/>](https://github.com/contiki-ng/contiki-ng/stargazers) |
+| **[FreeRTOS LTS](https://github.com/FreeRTOS/FreeRTOS-LTS)** 🔐 | **Long-term support release of FreeRTOS libraries.** Maintained by AWS with guaranteed security patches and stability testing over 2-year lifecycles. **MIT**. | [<img src="https://img.shields.io/github/stars/FreeRTOS/FreeRTOS-LTS?style=social&color=white" alt="FreeRTOS LTS Stars"/>](https://github.com/FreeRTOS/FreeRTOS-LTS/stargazers) |
+| **[µC/OS-III](https://github.com/weston-embedded/uC-OS3)** 🏥 | **Micrium's preemptive, highly portable RTOS kernel.** Certified for safety-critical medical, aerospace, and industrial devices. **Apache-2.0** (source open). | [<img src="https://img.shields.io/github/stars/weston-embedded/uC-OS3?style=social&color=white" alt="uC-OS3 Stars"/>](https://github.com/weston-embedded/uC-OS3/stargazers) |
+| **[Mbed OS Community Edition](https://github.com/mbed-ce/mbed-os)** 🔧 | **Community fork of Arm Mbed OS.** Continued development after Arm sunsetted official Mbed OS support in July 2026. **Apache-2.0**. | [<img src="https://img.shields.io/github/stars/mbed-ce/mbed-os?style=social&color=white" alt="Mbed CE Stars"/>](https://github.com/mbed-ce/mbed-os/stargazers) |
+| **[eCos](https://github.com/ecos-projects/ecos)** ⚙️ | **Configurable real-time operating system.** Highly customizable kernel for embedded applications in telecom, networking, and industrial hardware. **eCos License (GPL-compatible)**. | [<img src="https://img.shields.io/github/stars/ecos-projects/ecos?style=social&color=white" alt="eCos Stars"/>](https://github.com/ecos-projects/ecos/stargazers) |
+| **[BeRTOS](https://github.com/bertos/bertos)** 🔌 | **Modular RTOS for microcontrollers.** Designed for small footprint 8-bit, 16-bit, and 32-bit embedded systems. **GPL-2.0**. | [<img src="https://img.shields.io/github/stars/bertos/bertos?style=social&color=white" alt="BeRTOS Stars"/>](https://github.com/bertos/bertos/stargazers) |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Please follow these simple guidelines:
+
+1. Fork this repository.
+2. Edit `README.md` to add or update entry details.
+3. Follow the standard Markdown table format including badges and links.
+4. Submit a Pull Request with a short summary of changes.
+
+Check out [Awesome Lists](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for more curated software guides.
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find this repository useful for your embedded systems work, firmware development, or research, please consider supporting the project:
+
+- ⭐ **Star** this repository on GitHub to boost visibility!
+- 🔀 **Fork** and share it with fellow embedded developers, colleagues, and communities!
+- ☕ **Sponsor / Buy me a coffee**: Support ongoing open-source maintenance via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository is a **community-curated list** — not exhaustive and not an endorsement of any vendor.
+- Embedded OS platforms run on safety-critical hardware; certification requirements (IEC 61508, ISO 26262, DO-178C) must be independently verified for production systems.
+- **Lifecycle notice**: Mbed OS official support by Arm concluded in July 2026; developers are encouraged to use **Mbed OS Community Edition (Mbed CE)** for ongoing projects.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Embedded-Operating-System&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Embedded-Operating-System&type=date&legend=top-left)
