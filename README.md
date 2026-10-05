@@ -57,9 +57,9 @@ This repository tracks notable **commercial platforms** and **open-source projec
 
 ## 🔓 Open-Source GitHub Projects
 
-Sorted by star count (descending). Star badges link directly to each repo's stargazers page.
+Sorted by Stars_Count (descending). Stars_Badges link directly to each repo's stargazers page.
 
-| Repo | Description | Stars |
+| Repo | Description | GitHub_Stars |
 |------|-------------|-------|
 | **[Zephyr RTOS](https://github.com/zephyrproject-rtos/zephyr)** ⚡ | **The fastest-growing open-source RTOS.** **Zephyr 4.4** (April 2026) adds **OpenRISC support, WireGuard, Wi-Fi Direct**. Backed by Linux Foundation with contributions from Intel, Nordic, NXP, Renesas, STMicroelectronics. Supports ARM, RISC-V, x86, Xtensa, ARC, MIPS, SPARC. **Apache-2.0**. | [<img src="https://img.shields.io/github/stars/zephyrproject-rtos/zephyr?style=social&color=white" alt="Zephyr Stars"/>](https://github.com/zephyrproject-rtos/zephyr/stargazers) |
 | **[RT-Thread](https://github.com/RT-Thread/rt-thread)** 🌐 | **Open-source RTOS with strong IoT focus.** **v5.3.0** (September 2026) added **Rust language support**, device-tree models, **DVFS**, and **VirtIO 1.2**. Huge component ecosystem. **Apache-2.0**. | [<img src="https://img.shields.io/github/stars/RT-Thread/rt-thread?style=social&color=white" alt="RT-Thread Stars"/>](https://github.com/RT-Thread/rt-thread/stargazers) |
