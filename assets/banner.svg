@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#090d11"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="grid-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <style>
+      .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 48px; fill: #ffffff; }
+      .subtitle { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 22px; fill: #94a3b8; }
+      .pulse-line { stroke: #38bdf8; stroke-width: 2; fill: none; stroke-dasharray: 10 5; animation: dash 30s linear infinite; }
+      .wave { animation: float 6s ease-in-out infinite; }
+      @keyframes dash {
+        to { stroke-dashoffset: -1000; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      .node { animation: pulse 3s ease-in-out infinite alternate; }
+      @keyframes pulse {
+        0% { r: 4px; opacity: 0.5; }
+        100% { r: 7px; opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="350" fill="url(#bg)" rx="12"/>
+
+  <!-- Dynamic Background Grid & Oscilloscope Waveform (Background Layer) -->
+  <g opacity="0.25">
+    <path d="M 0,50 L 1200,50 M 0,100 L 1200,100 M 0,150 L 1200,150 M 0,200 L 1200,200 M 0,250 L 1200,250 M 0,300 L 1200,300" stroke="#334155" stroke-width="1"/>
+    <path d="M 100,0 L 100,350 M 200,0 L 200,350 M 300,0 L 300,350 M 400,0 L 400,350 M 500,0 L 500,350 M 600,0 L 600,350 M 700,0 L 700,350 M 800,0 L 800,350 M 900,0 L 900,350 M 1000,0 L 1000,350 M 1100,0 L 1100,350" stroke="#334155" stroke-width="1"/>
+  </g>
+
+  <!-- Dynamic Animated Signal / Circuit Lines (Behind Text) -->
+  <g opacity="0.4">
+    <path class="pulse-line" d="M 50,280 Q 200,320 350,260 T 650,290 T 950,250 T 1150,290" />
+    <path class="pulse-line" d="M 50,300 Q 250,240 450,310 T 850,270 T 1150,310" stroke="#818cf8" />
+    
+    <!-- Microcontroller Nodes -->
+    <circle cx="200" cy="285" r="5" fill="#38bdf8" class="node" />
+    <circle cx="500" cy="275" r="5" fill="#818cf8" class="node" style="animation-delay: 1s;" />
+    <circle cx="800" cy="290" r="5" fill="#c084fc" class="node" style="animation-delay: 2s;" />
+    <circle cx="1050" cy="265" r="5" fill="#38bdf8" class="node" style="animation-delay: 1.5s;" />
+  </g>
+
+  <!-- Decorative Top Bar -->
+  <rect x="0" y="0" width="1200" height="5" fill="url(#accent)"/>
+
+  <!-- Main Content (Foreground) -->
+  <g transform="translate(60, 130)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="210" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="16" cy="16" r="6" fill="#10b981"/>
+    <text x="32" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38bdf8" letter-spacing="1">CURATED ECOSYSTEM</text>
+
+    <!-- Main Title -->
+    <text x="0" y="80" class="title">Awesome Embedded OS ⚡</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="122" class="subtitle">Real-Time Operating Systems (RTOS), Embedded Linux &amp; Safety-Critical Kernels</text>
+  </g>
+
+  <!-- Decorative Tech Graphic (Right Side Background/Foreground Balance) -->
+  <g transform="translate(920, 80)" opacity="0.85">
+    <rect x="0" y="0" width="180" height="180" rx="24" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <path d="M 40,40 L 140,40 L 140,140 L 40,140 Z" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+    <rect x="60" y="60" width="60" height="60" rx="8" fill="url(#accent)"/>
+    <!-- Chip Pins -->
+    <path d="M 30,60 L 40,60 M 30,90 L 40,90 M 30,120 L 40,120 M 140,60 L 150,60 M 140,90 L 150,90 M 140,120 L 150,120 M 60,30 L 60,40 M 90,30 L 90,40 M 120,30 L 120,40 M 60,140 L 60,150 M 90,140 L 90,150 M 120,140 L 120,150" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
